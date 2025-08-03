@@ -30,7 +30,7 @@ def calculate_total_kwh(df):
     return total_kwh
 
 # --- Main Application ---
-st.title("Refrigerator Real-Time Energy Monitor & Control ☁️")
+st.title("Refrigerator Real-Time Energy Monitor & Control")
 st.caption("Powered by a local collector and a cloud database. This page will auto-refresh.")
 
 # --- NEW: Add Control Buttons ---
@@ -99,4 +99,5 @@ while True:
             st.warning("Will attempt to reconnect in 15 seconds...")
     
     time.sleep(15)
+
 
