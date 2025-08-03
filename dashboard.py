@@ -42,7 +42,7 @@ with col1:
         try:
             # Insert a new 'ON' command into the database
             supabase.table('commands').insert({"command": "ON"}).execute()
-            st.success("✅ 'Turn On' command sent!")
+            st.success("Smart plug turned on!")
         except Exception as e:
             st.error(f"Failed to send command: {e}")
 
@@ -51,7 +51,7 @@ with col2:
         try:
             # Insert a new 'OFF' command into the database
             supabase.table('commands').insert({"command": "OFF"}).execute()
-            st.success("✅ 'Turn Off' command sent!")
+            st.success("Smart plug turned off!")
         except Exception as e:
             st.error(f"Failed to send command: {e}")
 
@@ -99,3 +99,4 @@ while True:
             st.warning("Will attempt to reconnect in 15 seconds...")
     
     time.sleep(15)
+
